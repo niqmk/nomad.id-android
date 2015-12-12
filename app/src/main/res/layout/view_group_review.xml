@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_image_view"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        android:layout_margin="@dimen/margin_small"
+        android:src="@drawable/ic_profile" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/avatar_image_view"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <com.allega.nomad.viewgroup.CustomSmallRatingBar
+        android:id="@+id/rating_bar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_toRightOf="@+id/name_text_view"
+        android:stepSize="1"
+        android:visibility="gone" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_text_view"
+        android:layout_toRightOf="@+id/avatar_image_view"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/comment_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatar_image_view"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+</RelativeLayout>

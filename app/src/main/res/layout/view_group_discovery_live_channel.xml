@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/discover_video_width"
+    android:layout_height="@dimen/discover_video_height"
+    android:background="@drawable/background_round_border_white">
+
+    <ImageView
+        android:id="@+id/cover_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_black_gradient"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_small">
+
+        <com.ctrlplusz.anytextview.AnyTextView
+            android:id="@+id/genre_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x_small"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+
+        <com.ctrlplusz.anytextview.AnyTextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x_small"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/movie_list_height">
+
+    <ImageView
+        android:id="@+id/background_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/download_progress_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/margin_x_small"
+        android:layout_toLeftOf="@+id/play_image_view"
+        android:singleLine="true"
+        android:text="MOVIE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/watch_list_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/title_text_view"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_x_small"
+        android:layout_toLeftOf="@+id/play_image_view"
+        android:background="@drawable/background_round_border_light_blue_normal"
+        android:singleLine="true"
+        android:text="@string/watchlist"
+        android:textColor="@color/white"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/watch_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/title_text_view"
+        android:layout_marginLeft="@dimen/margin_x_small"
+        android:layout_toRightOf="@+id/watch_list_text_view"
+        android:background="@drawable/background_round_border_red"
+        android:singleLine="true"
+        android:text="@string/watch"
+        android:textColor="@color/white"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/progress_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/download_progress_bar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_x_small"
+        android:singleLine="true"
+        android:text="86%"
+        android:textColor="@color/green"
+        android:visibility="gone"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <ProgressBar
+        android:id="@+id/download_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progress="45"
+        android:progressDrawable="@drawable/progress_color"
+        android:visibility="gone" />
+</RelativeLayout>

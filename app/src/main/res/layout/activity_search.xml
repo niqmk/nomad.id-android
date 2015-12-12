@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.allega.nomad.viewgroup.HeaderSearchViewGroup
+        android:id="@+id/header_search_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/search_tab_strip"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:pstsDividerColor="@color/white"
+        app:pstsIndicatorColor="@color/red" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/search_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/recent_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:padding="@dimen/padding_small">
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_toLeftOf="@+id/clear_button"
+                    android:text="@string/recently_search"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:id="@+id/clear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/margin_small"
+                    android:text="@string/clear"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/recent_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

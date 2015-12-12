@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:text="@string/messages"
+        android:textAllCaps="true"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/no_result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_text_view"
+        android:text="@string/no_result"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <ListView
+        android:id="@+id/message_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_text_view"
+        android:divider="@null"
+        android:dividerHeight="@dimen/margin_small" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal" />
+</RelativeLayout>

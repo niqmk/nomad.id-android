@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        android:text="@string/profile"
+        android:textAllCaps="true"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_medium">
+
+
+        <ImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/username_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                app:typeface="RobotoCondensed-Regular.ttf"
+                tools:text="username" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/margin_x_small"
+                android:background="@color/light_gray" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/email_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                app:typeface="RobotoCondensed-Regular.ttf"
+                tools:text="email" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_medium">
+
+        <LinearLayout
+            android:id="@+id/change_password_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_x_small">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/change_password_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/change_password"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:id="@+id/change_email_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:paddingTop="@dimen/padding_small">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/change_email_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/change_email"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:id="@+id/change_username_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:paddingTop="@dimen/padding_small">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/change_username_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/change_username"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:id="@+id/facebook_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:paddingTop="@dimen/padding_small">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/facebook"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/facebook_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:drawableRight="@drawable/ic_right_arrow"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:id="@+id/logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:paddingTop="@dimen/padding_small">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/logout"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

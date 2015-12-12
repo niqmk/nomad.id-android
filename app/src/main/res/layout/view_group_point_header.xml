@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/card_view_corner_small">
+
+        <LinearLayout
+            android:id="@+id/buy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_medium">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/buy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/buy"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stack_currency" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/card_view_corner_small">
+
+        <LinearLayout
+            android:id="@+id/free_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_medium">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/free_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/free"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stack_currency" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.allega.nomad.viewgroup.HeaderActionBarViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.allega.nomad.viewgroup.CustomRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:rating="1"
+            android:stepSize="1" />
+
+        <com.ctrlplusz.anytextview.AnyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tap_a_star_to_rate"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/light_gray" />
+    </LinearLayout>
+
+    <com.ctrlplusz.anytextview.AnyEditTextView
+        android:id="@+id/review_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="left|top"
+        android:hint="@string/hint_review"
+        android:maxLength="400"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@color/light_gray">
+
+        <com.ctrlplusz.anytextview.AnyTextView
+            android:id="@+id/counter_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_toLeftOf="@+id/send_button"
+            android:text="@string/max_review"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+
+        <com.ctrlplusz.anytextview.AnyButton
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/background_round_border_light_blue_selected"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+    </RelativeLayout>
+</LinearLayout>

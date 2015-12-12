@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.allega.nomad.viewgroup.PlayerViewGroup
+        android:id="@+id/player_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_video_height" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:padding="@dimen/padding_medium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.allega.nomad.viewgroup.VideoDetailViewGroup
+                android:id="@+id/video_detail_view_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/trailer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:visibility="gone">
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trailers"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <org.lucasr.twowayview.widget.TwoWayView
+                    android:id="@+id/trailer_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/discover_video_height"
+                    app:twowayview_layoutManager="ListLayoutManager" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/single_trailer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:visibility="gone">
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trailers"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <com.allega.nomad.viewgroup.ClipViewGroup
+                    android:id="@+id/single_trailer_video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_video_height"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/synopsis"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:id="@+id/description_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <com.ctrlplusz.anytextview.AnyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="RobotoCondensed-Regular.ttf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_genre"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/genre_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_release"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/release_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_director"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/director_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_cast"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/cast_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_runtime"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/runtime_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_language"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/language_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text="@string/synopsis_subtitle"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x_small"
+                        android:text="@string/double_dot"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                    <com.ctrlplusz.anytextview.AnyTextView
+                        android:id="@+id/subtitle_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        app:typeface="RobotoCondensed-Regular.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

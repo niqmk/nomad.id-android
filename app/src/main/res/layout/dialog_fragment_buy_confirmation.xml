@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ctrlplusz.anytextview.AnyTextView
+        android:id="@+id/description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:gravity="center"
+        app:typeface="RobotoCondensed-Regular.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                android:gravity="center"
+                android:text="@string/current_point"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/before_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/red"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:src="@drawable/ic_right_arrow" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                android:gravity="center"
+                android:text="@string/point_after_purchase"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/after_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x_small"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/red"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.ctrlplusz.anytextview.AnyButton
+            android:id="@+id/buy_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/currency_yellow"
+            android:text="@string/buy"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:typeface="RobotoCondensed-Regular.ttf" />
+    </LinearLayout>
+</LinearLayout>

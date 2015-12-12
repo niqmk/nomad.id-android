@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="@drawable/default_ripple_transparent"
+    app:cardCornerRadius="@dimen/card_view_corner_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:id="@+id/description_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_text_view"
+                android:textAllCaps="true"
+                android:textColor="@color/gray"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:scaleType="center"
+            android:src="@drawable/ic_play_collection" />
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/download_progress_bar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                app:donut_finished_color="@color/green"
+                app:donut_max="100"
+                app:donut_text_color="@color/green"
+                app:donut_text_size="10sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:paddingLeft="@dimen/padding_x_small"
+            android:paddingRight="@dimen/padding_x_small"
+            android:src="@drawable/ic_cancel_collection"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

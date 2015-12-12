@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding -->
+    <dimen name="padding_xxx_small">1dp</dimen>
+    <dimen name="padding_xx_small">2dp</dimen>
+    <dimen name="padding_x_small">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="padding_x_large">64dp</dimen>
+    <dimen name="padding_xx_large">128dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_xxx_small">1dp</dimen>
+    <dimen name="margin_xx_small">2dp</dimen>
+    <dimen name="margin_x_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_x_large">64dp</dimen>
+
+    <dimen name="card_view_corner_small">4dp</dimen>
+
+    <dimen name="font_size_small">10sp</dimen>
+    <dimen name="font_size_medium">14sp</dimen>
+    <dimen name="font_size_large">18sp</dimen>
+
+    <dimen name="grid_spacing">2dp</dimen>
+    <dimen name="list_spacing">2dp</dimen>
+
+    <dimen name="progress_bar_height">2dp</dimen>
+    <dimen name="avatar_size">48dp</dimen>
+    <dimen name="movie_list_height">200dp</dimen>
+    <dimen name="video_view_height">200dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="min_width_dialog">400dp</dimen>
+    <dimen name="separator_height">1dp</dimen>
+    <dimen name="navigation_drawer_width">320dp</dimen>
+    <dimen name="main_video_height">200dp</dimen>
+    <dimen name="discover_movie_height">200dp</dimen>
+    <dimen name="discover_video_height">150dp</dimen>
+    <dimen name="discover_video_height_2">300dp</dimen>
+    <dimen name="discover_video_width">266dp</dimen>
+    <dimen name="watch_button_padding">96dp</dimen>
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small" />
+
+        <com.allega.nomad.viewgroup.SquareViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:flipInterval="5000"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/movie_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/movies"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/movie_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_movie_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/event"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/event_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edutainment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/edutainment"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/edutainment_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height_2"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serial_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/serial"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/serial_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_show_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/tv_show"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/tv_show_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/live_channel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/live_channel"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/live_channel_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ad_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/ad"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <com.ctrlplusz.anytextview.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/ads_sub"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:typeface="RobotoCondensed-Regular.ttf" />
+
+            <org.lucasr.twowayview.widget.TwoWayView
+                android:id="@+id/ad_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discover_video_height"
+                android:layout_margin="@dimen/margin_small" />
+        </LinearLayout>
+
+        <com.allega.nomad.viewgroup.FooterViewGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

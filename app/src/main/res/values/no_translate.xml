@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <array name="navigation_menu_icon">
+        <item>@drawable/ic_nomad_currency</item>
+        <item>@drawable/ic_movies</item>
+        <item>@drawable/ic_music</item>
+        <item>@drawable/ic_event</item>
+        <item>@drawable/ic_edutainment</item>
+        <item>@drawable/ic_series</item>
+        <item>@drawable/ic_tv_show</item>
+        <item>@drawable/ic_live_channel</item>
+    </array>
+    <string-array name="ad_menu_icon">
+        <item>@drawable/ic_retail</item>
+        <item>@drawable/ic_entertainment</item>
+        <item>@drawable/ic_luxury_goods</item>
+        <item>@drawable/ic_finance</item>
+        <item>@drawable/ic_food_beverages</item>
+        <item>@drawable/ic_automobile</item>
+        <item>@drawable/ic_services</item>
+        <item>@drawable/ic_fashion</item>
+        <item>@drawable/ic_technology</item>
+        <item>@drawable/ic_travel</item>
+    </string-array>
+    <array name="movies_menu_icon">
+        <item>@drawable/ic_action</item>
+        <item>@drawable/ic_adventure</item>
+        <item>@drawable/ic_comedy</item>
+        <item>@drawable/ic_drama</item>
+        <item>@drawable/ic_documentary</item>
+        <item>@drawable/ic_family</item>
+        <item>@drawable/ic_kids</item>
+        <item>@drawable/ic_fantasy</item>
+        <item>@drawable/ic_history</item>
+        <item>@drawable/ic_horror</item>
+        <item>@drawable/ic_mystery</item>
+        <item>@drawable/ic_romance</item>
+        <item>@drawable/ic_thriller</item>
+    </array>
+    <string-array name="edutainment_menu_icon">
+        <item>@drawable/ic_academic</item>
+        <item>@drawable/ic_automotive</item>
+        <item>@drawable/ic_health</item>
+        <item>@drawable/ic_life_style</item>
+        <item>@drawable/ic_travel</item>
+        <item>@drawable/ic_photography</item>
+        <item>@drawable/ic_cooking</item>
+    </string-array>
+    <string-array name="event_menu_icon">
+        <item>@drawable/ic_indonesia_super_league</item>
+        <item>@drawable/ic_sports</item>
+        <item>@drawable/ic_music_concert</item>
+        <item>@drawable/ic_drama</item>
+        <item>@drawable/ic_festival</item>
+        <item>@drawable/ic_family</item>
+        <item>@drawable/ic_seminar</item>
+    </string-array>
+</resources>

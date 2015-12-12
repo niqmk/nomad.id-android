@@ -1,0 +1,86 @@
+package com.allega.nomad.base;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+
+import java.util.List;
+
+/**
+ * Created by imnotpro on 8/9/15.
+ */
+public abstract class BaseAbstractExpendableAdapter<G, C> extends BaseExpandableListAdapter {
+
+    protected LayoutInflater inflater;
+    protected List<G> itemList;
+    protected Context context;
+
+    public BaseAbstractExpendableAdapter(Context context, List<G> itemList) {
+        if (context == null) {
+            throw new IllegalArgumentException("Context cannot be null");
+        }
+        if (itemList == null) {
+            throw new IllegalArgumentException("RealmResults cannot be null");
+        }
+
+        this.context = context;
+        this.itemList = itemList;
+        this.inflater = LayoutInflater.from(context);
+    }
+
+    @Override
+    public int getGroupCount() {
+        return itemList.size();
+    }
+
+    @Override
+    public G getGroup(int groupPosition) {
+        return itemList.get(groupPosition);
+    }
+
+    @Override
+    public C getChild(int groupPosition, int childPosition) {
+        return getChild(itemList.get(groupPosition), childPosition);
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;
+    }
+
+    @Override
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
+    }
+
+    @Override
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = onCreateGroupView(groupPosition, isExpanded, convertView, parent);
+        }
+        onBindGroupView(groupPosition, isExpanded, convertView, parent);
+        return convertView;
+    }
+
+
+    @Override
+    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = onCreateChildView(groupPosition, childPosition, isLastChild, convertView, parent);
+        }
+        onBindChildView(groupPosition, childPosition, isLastChild, convertView, parent);
+        return convertView;
+    }
+
+    protected abstract void onBindGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent);
+
+    protected abstract View onCreateGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent);
+
+    protected abstract void onBindChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent);
+
+    protected abstract View onCreateChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent);
+
+    public abstract C getChild(G group, int childPosition);
+}

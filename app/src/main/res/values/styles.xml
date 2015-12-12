@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/ActionBarTheme</item>
+        <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/red_ripple</item>
+        <item name="colorControlHighlight">@color/red_ripple</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
+    </style>
+
+    <style name="AppTheme.NoTitleBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>   
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoTitleBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.OverlayActionModes">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/primary_color</item>
+        <item name="android:background">@color/primary_color</item>
+    </style>
+
+    <style name="OverlayActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/OverlayActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/OverlayActionBar.TitleTextStyle</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="OverlayActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="AppDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlHighlight">@color/blue</item>
+    </style>
+</resources>

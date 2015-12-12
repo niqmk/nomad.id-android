@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/action_sort_latest"
+            android:title="@string/latest" />
+        <item
+            android:id="@+id/action_sort_oldest"
+            android:title="@string/oldest" />
+        <item
+            android:id="@+id/action_sort_popular"
+            android:title="@string/popular" />
+        <item
+            android:id="@+id/action_sort_alphabetical"
+            android:title="@string/alphabetical" />
+    </group>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+</menu>
